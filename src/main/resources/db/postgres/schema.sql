@@ -1,5 +1,5 @@
 -- Wipe everything before creating the tables to make the script idempotent.
-DROP SCHEMA public cascade;
+--DROP SCHEMA public cascade;
 CREATE SCHEMA public;
 
 CREATE TABLE vets (
