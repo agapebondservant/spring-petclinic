@@ -1,4 +1,11 @@
+DELETE FROM visits;
+DELETE FROM pets;
+DELETE FROM types;
+DELETE FROM owners;
+DELETE FROM vet_specialties;
 DELETE FROM vets;
+DELETE FROM specialties;
+
 INSERT INTO vets VALUES (1, 'James', 'Carter');
 INSERT INTO vets VALUES (2, 'Helen', 'Leary');
 INSERT INTO vets VALUES (3, 'Linda', 'Douglas');
@@ -7,20 +14,17 @@ INSERT INTO vets VALUES (5, 'Henry', 'Stevens');
 INSERT INTO vets VALUES (6, 'Sharon', 'Jenkins');
 ALTER SEQUENCE vets_id_seq RESTART WITH 7;
 
-DELETE FROM specialties;
 INSERT INTO specialties VALUES (1, 'radiology');
 INSERT INTO specialties VALUES (2, 'surgery');
 INSERT INTO specialties VALUES (3, 'dentistry');
 ALTER SEQUENCE specialties_id_seq RESTART WITH 4;
 
-DELETE FROM vet_specialties;
 INSERT INTO vet_specialties VALUES (2, 1);
 INSERT INTO vet_specialties VALUES (3, 2);
 INSERT INTO vet_specialties VALUES (3, 3);
 INSERT INTO vet_specialties VALUES (4, 2);
 INSERT INTO vet_specialties VALUES (5, 1);
 
-DELETE FROM types;
 INSERT INTO types VALUES (1, 'cat');
 INSERT INTO types VALUES (2, 'dog');
 INSERT INTO types VALUES (3, 'lizard');
@@ -29,7 +33,6 @@ INSERT INTO types VALUES (5, 'bird');
 INSERT INTO types VALUES (6, 'hamster');
 ALTER SEQUENCE types_id_seq RESTART WITH 7;
 
-DELETE FROM owners;
 INSERT INTO owners VALUES (1, 'George', 'Franklin', '110 W. Liberty St.', 'Madison', '6085551023');
 INSERT INTO owners VALUES (2, 'Betty', 'Davis', '638 Cardinal Ave.', 'Sun Prairie', '6085551749');
 INSERT INTO owners VALUES (3, 'Eduardo', 'Rodriquez', '2693 Commerce St.', 'McFarland', '6085558763');
@@ -42,7 +45,6 @@ INSERT INTO owners VALUES (9, 'David', 'Schroeder', '2749 Blackhawk Trail', 'Mad
 INSERT INTO owners VALUES (10, 'Carlos', 'Estaban', '2335 Independence La.', 'Waunakee', '6085555487');
 ALTER SEQUENCE owners_id_seq RESTART WITH 11;
 
-DELETE FROM pets;
 INSERT INTO pets VALUES (1, 'Leo', '2000-09-07', 1, 1);
 INSERT INTO pets VALUES (2, 'Basil', '2002-08-06', 6, 2);
 INSERT INTO pets VALUES (3, 'Rosy', '2001-04-17', 2, 3);
@@ -58,7 +60,6 @@ INSERT INTO pets VALUES (12, 'Lucky', '2000-06-24', 2, 10);
 INSERT INTO pets VALUES (13, 'Sly', '2002-06-08', 1, 10);
 ALTER SEQUENCE pets_id_seq RESTART WITH 14;
 
-DELETE FROM visits;
 INSERT INTO visits VALUES (1, 7, '2010-03-04', 'rabies shot');
 INSERT INTO visits VALUES (2, 8, '2011-03-04', 'rabies shot');
 INSERT INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
